@@ -4,7 +4,7 @@ import { Header } from './header'
 export const Hero = () => {
 
     const style = {
-        backgroundImage: `url(/lawyer2.jpg)`,
+        backgroundImage: `url(/lawyer3.jpg)`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center'

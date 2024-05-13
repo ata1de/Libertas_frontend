@@ -17,7 +17,8 @@ const config: Config = {
     colors: {
       'DarkRed': '#A90000',
       'DarkBlue': '#00032B',
-      'LightBlue': '#0C1035'
+      'LightBlue': '#0C1035',
+      'LightGray': '#7E8396'
     }
   },
   plugins: [],

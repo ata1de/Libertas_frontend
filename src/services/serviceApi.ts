@@ -2,7 +2,7 @@ import api from "./api";
 
 export type ServiceType = {
     id: string,
-    title: string,
+    name: string,
     description: string
 }
 
@@ -14,7 +14,6 @@ const serviceService = {
             return err.response
         })
 
-        console.log(res)
         return res
     }
 }
