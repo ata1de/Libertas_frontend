@@ -43,6 +43,8 @@ const Home = ({services}: IndexPageProps) => {
 
 export const getStaticProps: GetStaticProps = async() => {
   const res = await serviceService.getFeaturedServices();
+  console.log(res)
+  
   return {
     props: {
       services: res.data

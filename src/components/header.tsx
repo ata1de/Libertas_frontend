@@ -1,4 +1,5 @@
 import React from 'react'
+import { Input } from './ui/input'
 
 export const Header = () => {
   return (
@@ -20,7 +21,7 @@ export const Header = () => {
         </nav>
         
         <form action="">
-            <input className='p-2 border-solid border-black border-2 rounded ' type="search" name='search' placeholder='Pesquisar recursos'/>
+            <Input className='' placeholder='Pesquise um serviço'/>
         </form>
     </div>
   )
