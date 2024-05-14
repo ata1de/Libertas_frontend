@@ -1,5 +1,6 @@
 import React from 'react'
 import { Input } from './ui/input'
+import { Search } from 'lucide-react'
 
 export const Header = () => {
   return (
@@ -13,15 +14,15 @@ export const Header = () => {
 
         </div>
 
-        <nav className='flex items-center justify-center gap-3'>
-            <a href="" className='text-sm font-semibold leading-6 text-white'>SOBRE</a>
-            <a href="" className='text-sm font-semibold leading-6 text-white'>SERVIÇOS</a>
-            <a href="" className='text-sm font-semibold leading-6 text-white'>HISTÓRIA</a>
-            <a href="" className='text-sm font-semibold leading-6 text-white'>CONTE CONOSCO</a>
+        <nav className='flex items-center justify-center gap-6'>
+            <a href="" className='text-sm leading-6 text-LightGray'>SOBRE</a>
+            <a href="" className='text-sm leading-6 text-LightGray'>SERVIÇOS</a>
+            <a href="" className='text-sm leading-6 text-LightGray'>HISTÓRIA</a>
+            <a href="" className='text-sm leading-6 text-LightGray'>CONTE CONOSCO</a>
         </nav>
         
         <form action="">
-            <Input className='' placeholder='Pesquise um serviço'/>
+            <Input className='py-1 h-auto' placeholder='Pesquise um serviço'/>
         </form>
     </div>
   )
