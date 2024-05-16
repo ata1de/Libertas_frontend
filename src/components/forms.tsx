@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { Button } from './ui/button'
@@ -24,6 +24,7 @@ const Forms = () => {
     function handleClient(data: ClientSchema) {
         console.log(data)
     }
+
 
 
   return (
@@ -56,7 +57,7 @@ const Forms = () => {
                 </div>
             </div>
 
-            <Textarea className='text-black ' placeholder='Escreve o serviço que vc deseja, detalhe o quanto puder' {...register('demand')}/>
+            <Textarea className='text-black ' placeholder='Escreva o serviço que você deseja, detalhe o quanto puder.' {...register('demand')}/>
             <Button className='bg-DarkRed w-[150px]' type='submit'>ENVIAR</Button>
         </form>
     </div>
