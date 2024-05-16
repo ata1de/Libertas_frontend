@@ -4,7 +4,7 @@ import { Search } from 'lucide-react'
 
 export const Header = () => {
   return (
-    <div className='bg-transparent flex justify-between items-center p-6 '>
+    <div className='bg-transparent flex justify-between items-center pt-6 '>
         <div className='flex items-center justify-center gap-3'>
             <a href="/" className='flex items-center'>
                 <img className='w-8' src="/logo_libertas.svg" alt="Foto das mãos de um advogado" />
@@ -22,7 +22,7 @@ export const Header = () => {
         </nav>
         
         <form action="">
-            <Input className='py-1 h-auto' placeholder='Pesquise um serviço'/>
+            <Input className='py-1 h-auto' placeholder={<Search/> + "Pesquise os serviços" }/>
         </form>
     </div>
   )

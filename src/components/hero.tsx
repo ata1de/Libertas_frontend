@@ -13,15 +13,15 @@ export const Hero = () => {
     }
 
   return (
-    <div className=' w-full min-h-screen md:h-screen ' style={style}>
+    <div className=' w-full min-h-screen md:h-screen pl-24 pr-24' style={style}>
         <div>
             <Header/>
         </div>
 
-        <div className='flex items-center justify-center w-[50%] flex-col gap-4 h-[50%]'>
-          <p className='text-3xl font-bold'>LIBERTAS ASSETS</p>
-          <p className='text-xl text-LightGray leading-7 max-w-[235px]'>Reiventando o mercado de fundos e investimentos</p>
-          <Button className='bg-DarkRed '>Saiba mais</Button>
+        <div className='flex items-left justify-center w-[50%] flex-col gap-4 h-screen pb-11'>
+          <p className='text-4xl font-bold'>LIBERTAS ASSETS</p>
+          <p className='text-2xl text-LightGray leading-8 max-w-[290px] '>Reiventando o mercado de fundos e investimentos</p>
+          <Button className='bg-DarkRed w-[140px]'>Saiba mais</Button>
         </div>
         {/* <img className='pointer-events-none select-none' style={{objectFit: 'cover', objectPosition: '75%'}} src="/lawyer.jpg" alt="Foto de advogado nas mãos" /> */}
     </div>

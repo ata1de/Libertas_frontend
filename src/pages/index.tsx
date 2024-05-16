@@ -1,3 +1,4 @@
+import Forms from '@/components/forms'
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
 import { Service } from '@/components/service'
@@ -29,7 +30,7 @@ const Home = ({services}: IndexPageProps) => {
         </div>
       </div>
 
-      <div className='flex justify-center gap-12 bg-DarkBlue p-20 flex-col'>
+      <div className='flex justify-center gap-12 bg-DarkBlue py-20 px-24 flex-col'>
           <p className='tracking-wide font-bold text-2xl'>NOSSOS SERVIÇOS</p>
           <div className='flex items-center justify-center gap-3'>
             {services.map((service) => (
@@ -37,6 +38,8 @@ const Home = ({services}: IndexPageProps) => {
             ))}
           </div>
       </div>
+
+      <Forms/>
 
     </div>
   )
