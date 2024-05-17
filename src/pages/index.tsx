@@ -9,6 +9,7 @@ import { GetStaticProps } from 'next'
 import React, { ReactNode, useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { Footer } from '@/components/footer'
 
 
 interface IndexPageProps  {
@@ -50,6 +51,8 @@ const Home = ({services}: IndexPageProps) => {
       </div>
 
       <Forms/>
+
+      <Footer/>
 
     </div>
   )
