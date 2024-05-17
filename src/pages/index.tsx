@@ -10,6 +10,7 @@ import React, { ReactNode, useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { Footer } from '@/components/footer'
+import Head from 'next/head'
 
 
 interface IndexPageProps  {
@@ -18,7 +19,7 @@ interface IndexPageProps  {
 }
 
 const Home = ({services}: IndexPageProps) => {
-  console.log(services)
+  // console.log(services)
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -28,6 +29,10 @@ const Home = ({services}: IndexPageProps) => {
   }, []);
   return (
     <div>
+      <Head>
+            <title>Libertas</title>
+            <link rel="shortcut icon" href="/logo_libertas.svg" type="image/x-icon" />
+      </Head>
       <div>
         <Hero/>
       </div>
@@ -60,7 +65,6 @@ const Home = ({services}: IndexPageProps) => {
 
 export const getStaticProps: GetStaticProps = async() => {
   const res = await serviceService.getFeaturedServices();
-  console.log(res)
   
   return {
     props: {

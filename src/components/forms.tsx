@@ -43,7 +43,7 @@ const Forms = () => {
                     <p className='font-bold'>Endereço</p>
                     <p className='text-LightGray'>Rua tal tal tal n°32 102 andar</p>
                     <p className='text-LightGray'>Santo Agostinho, Recife - CEP 5122379</p>
-                </div>
+                </div>  
             </div>
 
         </div>

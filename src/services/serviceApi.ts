@@ -15,6 +15,16 @@ const serviceService = {
         })
 
         return res
+    },
+
+    getByName: async(name: string) => {
+        const res = await api.get(`/services/search?name=${name}`).catch((err) => {
+            console.log(err)
+
+            return err.response
+        })
+
+        return res
     }
 }
 
