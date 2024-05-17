@@ -15,10 +15,10 @@ export const Header = () => {
         </div>
 
         <nav className='flex items-center justify-center gap-6'>
-            <a href="" className='text-sm leading-6 text-LightGray'>SOBRE</a>
-            <a href="" className='text-sm leading-6 text-LightGray'>SERVIÇOS</a>
-            <a href="" className='text-sm leading-6 text-LightGray'>HISTÓRIA</a>
-            <a href="" className='text-sm leading-6 text-LightGray'>CONTE CONOSCO</a>
+            <a href="#sobre" className='text-sm leading-6 text-LightGray'>SOBRE</a>
+            <a href="#serviços" className='text-sm leading-6 text-LightGray'>SERVIÇOS</a>
+            <a href="#historia" className='text-sm leading-6 text-LightGray'>HISTÓRIA</a>
+            <a href="#conteConosco" className='text-sm leading-6 text-LightGray'>CONTE CONOSCO</a>
         </nav>
         
         <form action="">

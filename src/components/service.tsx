@@ -1,10 +1,18 @@
 import { ServiceType } from '@/services/serviceApi'
-import React from 'react'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import React, { useEffect } from 'react'
 
 export const Service = ({id, name, description}: ServiceType) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+    return () => {
+      Aos.refresh();
+    };
+  }, []);
   console.log(name)
   return (
-    <div className='flex items-start flex-col gap-8 p-9 bg-LightBlue w-[400px] h-[350px] border-2
+    <div data-aos='flip-left' data-aos-duration='1200' key={id} className='flex items-start flex-col gap-8 p-9 bg-LightBlue w-[400px] h-[350px] border-2
      border-solid border-DarkGray transition duration-300 ease-in-out hover:opacity-75'>
       <p className='text-lg font-bold'>{name}</p>
 

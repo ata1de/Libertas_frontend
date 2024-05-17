@@ -5,6 +5,7 @@ import { Button } from './ui/button'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import clientService from '@/services/clientService'
 
 const clientSchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),
@@ -21,14 +22,15 @@ const Forms = () => {
         resolver: zodResolver(clientSchema)
     })
 
-    function handleClient(data: ClientSchema) {
-        console.log(data)
+    const handleClient = async(data: ClientSchema) => {
+        const res = await clientService.postCreateClient(data)
+        console.log(res)
     }
 
 
 
   return (
-    <div className='flex items-center justify-around gap-8 bg-LightBlue border-b-4 border-DarkRed py-20 px-24'>
+    <div id='conteConosco' className='flex items-center justify-around gap-8 bg-LightBlue border-b-4 border-DarkRed py-20 px-24'>
         <div className='flex flex-col items-center justify-center gap-4 w-[165px] mr-[120px]'>
             <p className='font-bold text-3xl border-b-2 border-DarkRed'>FALE COM A LIBERTAS</p>
             <div className='flex flex-col justify-center gap-4'>
@@ -57,7 +59,7 @@ const Forms = () => {
                 </div>
             </div>
 
-            <Textarea className='text-black ' placeholder='Escreva o serviço que você deseja, detalhe o quanto puder.' {...register('demand')}/>
+            <Textarea className='text-black h-[150px]' placeholder='Escreva o serviço que você deseja, detalhe o quanto puder.' {...register('demand')}/>
             <Button className='bg-DarkRed w-[150px]' type='submit'>ENVIAR</Button>
         </form>
     </div>

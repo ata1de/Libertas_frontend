@@ -1,25 +1,27 @@
 import api from "./api"
 
 export interface ClientType {
+    name: string,
+    email: string,
+    phone: string
     company: string,
     demand: string,
-    email: string,
-    name: string,
-    phone: string
 }
 
 const clientService = {
-    postCreateClient: async({company, demand, email, name, phone}: ClientType) => {
-        const res = await api.post('/', {
-            data:{
-                company,
-                demand, 
-                email,
-                name, 
-                phone
+    postCreateClient: async(resume: ClientType) => {
+        const res = await api.post('/', resume).catch((err) => {
+            if (err.response.status = 400) {
+                console.log(err)
+                return err.response
             }
+
+            console.log(err)
+            return err
         })
 
-        return res
+        return res  
     }
 }
+
+export default clientService
