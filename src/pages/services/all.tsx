@@ -13,7 +13,6 @@ export default function all() {
 
     const searchServices = async () => {
         const res = await serviceService.getAllServices()
-        console.log(res)
         setListServices(res.data)
     }
 
@@ -22,7 +21,6 @@ export default function all() {
     }
     , [])
 
-    console.log(listServices)
   return (
     <div className='w-full min-h-screen flex flex-col'>
         <Head>

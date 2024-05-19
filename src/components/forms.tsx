@@ -18,13 +18,15 @@ const clientSchema = z.object({
 type ClientSchema = z.infer<typeof clientSchema>
 
 const Forms = () => {
-    const { register, handleSubmit } = useForm<ClientSchema>({
+    const { register, handleSubmit, reset } = useForm<ClientSchema>({
         resolver: zodResolver(clientSchema)
     })
 
     const handleClient = async(data: ClientSchema) => {
         const res = await clientService.postCreateClient(data)
-        // console.log(res)
+        if (res.status == 200) {
+            reset(); // Limpar os inputs após o envio bem-sucedido
+        }
     }
 
 

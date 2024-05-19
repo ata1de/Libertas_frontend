@@ -42,13 +42,13 @@ const Home = ({services}: IndexPageProps) => {
 
         <div data-aos='fade-right' data-aos-duration='1200' className='flex justify-center items-center lg:items-start flex-col pl-5 w-[700px]'>
           <p className='text-sm font-bold pb-8'>A <span className='text-DarkRed '>LIBERTAS ASSETS</span> é uma empresa verdadeira moderna,impulsionada por uma equipe altamente motivada de profissionais exepcionais experientes</p>
-          <p className='text-sm text-LightGray'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolor provident dolorem. Facilis voluptatem voluptas voluptate vero debitis tempora fugiat consectetur eveniet dolore dicta voluptatibus nostrum sequi distinctio, eligendi delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et provident nesciunt minus reiciendis? Perferendis asperiores dolores ex facilis, officia architecto enim suscipit ut dolorem rem vel. Magni esse repellat iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus impedit commodi quam molestiae quae, harum quod officiis beatae fugit possimus suscipit. Laborum ipsum, itaque nulla voluptate cum veniam perferendis?</p>
+          <p className='text-sm text-LightGray'>A Libertas é uma firma de advocacia comprometida em oferecer soluções jurídicas personalizadas e de alta qualidade para nossos clientes. Com uma equipe de advogados experientes e dedicados, buscamos alcançar resultados excepcionais em diversas áreas do direito, sempre priorizando a satisfação e proteção dos interesses de nossos clientes. Além disso, valorizamos profundamente a confiança depositada em nós e nos esforçamos para construir relacionamentos sólidos, baseados na transparência, ética e compromisso com o sucesso de nossos clientes</p>
         </div>
       </div>
 
       <div id='serviços' className='flex justify-center gap-12 bg-DarkBlue py-20 px-24 flex-col'>
           <p className='tracking-wide font-bold text-2xl'>NOSSOS SERVIÇOS</p>
-          <div  className='flex items-center justify-center gap-3'>
+          <div  className='flex flex-wrap lg:flex-nowrap items-center justify-center gap-3'>
             {services.map((service) => (
               <Service key={service.id} {...service} />
             ))}

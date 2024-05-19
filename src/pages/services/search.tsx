@@ -46,7 +46,7 @@ export default function search() {
                 {listServices.length > 0 ? (listServices.map((service) => (
                     <Service id={service.id} name={service.name} description={service.description}/>
                 ))) :  (
-                    <p className='text-center italic drop-shadow-md text-lg '>Sem serviços desejados no momento. <span className='hover:border-b-2 hover:border-DarkRed'><a href="/services/all">Veja todos os nossos serviços</a></span></p>
+                    <p className='text-center italic drop-shadow-md text-lg '>Sem serviços correspondentes no momento. <span className='hover:border-b-2 hover:border-DarkRed'><a href="/services/all">Veja todos os nossos serviços</a></span></p>
                 )}
             </div>
         </div>
