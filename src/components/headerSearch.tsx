@@ -20,7 +20,7 @@ export const HeaderSearch = () => {
         try {
           searchSchema.parse({ searchName }) // parse analisa se o name é condizente com o schema
           setError("")
-          router.push(`/search?name=${searchName}`)
+          router.push(`/services/search?name=${searchName}`)
           setSearchName('')
 
         } catch (error) {

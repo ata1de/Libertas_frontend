@@ -25,7 +25,17 @@ const serviceService = {
         })
 
         return res
-    }
+    },
+
+    getAllServices: async() => {
+        const res = await api.get("/services/all").catch((err) => {
+            console.log(err)
+
+            return err.response
+        })
+
+        return res
+    },
 }
 
 export default serviceService

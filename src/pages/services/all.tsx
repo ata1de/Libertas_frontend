@@ -1,38 +1,32 @@
 import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
 import { HeaderSearch } from '@/components/headerSearch'
-import { Hero } from '@/components/hero'
 import { Service } from '@/components/service'
 import serviceService, { ServiceType } from '@/services/serviceApi'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 
-
-export default function search() {
-    const router = useRouter()
-    const { name }: any  = router.query
+export default function all() {
+    // const router = useRouter()
     const [listServices, setListServices] = useState<ServiceType[]>([])
     
 
     const searchServices = async () => {
-        const res = await serviceService.getByName(name)
-        // console.log(res)
-        setListServices(res.data.services)
+        const res = await serviceService.getAllServices()
+        console.log(res)
+        setListServices(res.data)
     }
 
     useEffect(() => {
         searchServices()
     }
-    , [name])
+    , [])
 
     console.log(listServices)
-    
-
   return (
     <div className='w-full min-h-screen flex flex-col'>
         <Head>
-            <title>Libertas - {name}</title>
+            <title>Libertas</title>
             <link rel="shortcut icon" href="/logo_libertas.svg" type="image/x-icon" />
         </Head>
 
@@ -53,5 +47,5 @@ export default function search() {
 
         <Footer/>
     </div>
-  ) 
+  )
 }
