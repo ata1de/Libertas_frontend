@@ -24,13 +24,13 @@ const Forms = () => {
 
     const handleClient = async(data: ClientSchema) => {
         const res = await clientService.postCreateClient(data)
-        console.log(res)
+        // console.log(res)
     }
 
 
 
   return (
-    <div id='conteConosco' className='flex items-center justify-around gap-8 bg-LightBlue border-b-4 border-DarkRed py-20 px-24'>
+    <div id='conteConosco' className='flex items-center justify-around gap-8 bg-LightBlue  py-20 px-24'>
         <div className='flex flex-col items-center justify-center gap-4 w-[165px] mr-[120px]'>
             <p className='font-bold text-3xl border-b-2 border-DarkRed'>FALE COM A LIBERTAS</p>
             <div className='flex flex-col justify-center gap-4'>

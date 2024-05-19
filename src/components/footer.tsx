@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div className='flex justify-around items-center gap-5 px-24 py-20 bg-DarkBlue'>
+    <div className='flex justify-around items-center gap-5 px-24 py-20 bg-DarkBlue border-t-4 border-DarkRed'>
         <div className='flex flex-col justify-center gap-3'>
             <img className='w-[100px]' src="/logo_libertas.svg" alt="Logo da empresa Libertas" />
             <p className='text-5xl  font-bold font-sans'>LIBERTAS</p>

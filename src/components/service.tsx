@@ -13,7 +13,7 @@ export const Service = ({id, name, description}: ServiceType) => {
   // console.log(name)
   return (
     <div data-aos='flip-left' data-aos-duration='1200' key={id} className='flex items-start flex-col gap-8 p-9 bg-LightBlue w-[400px] h-[350px] border-2
-     border-solid border-DarkGray transition duration-300 ease-in-out hover:opacity-75'>
+     border-solid border-DarkGray transition duration-300 ease-in-out hover:opacity-75 rounded-sm shadow-md'>
       <p className='text-lg font-bold'>{name}</p>
 
       <p className='text-sm text-LightGray h-[120px] overflow-hidden'>{description}</p>
