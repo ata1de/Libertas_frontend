@@ -37,18 +37,18 @@ const Home = ({services}: IndexPageProps) => {
         <Hero/>
       </div>
 
-      <div id='sobre'  className='flex items-center justify-start gap-12 bg-DarkBlue p-20'>
-        <img data-aos='fade-right' data-aos-duration='1200' className='w-[300px] flex items-center justify-center pl-5' src="/logo_libertas.svg" alt="logo da libertas" />
+      <div id='sobre'  className='flex items-center justify-start  min-[1550px]:justify-center gap-12 bg-DarkBlue py-20 px-8 sm:px-24'>
+        <img data-aos='fade-right' data-aos-duration='1200' className='w-[300px] items-center justify-center pl-5 hidden min-[830px]:flex' src="/logo_libertas.svg" alt="logo da libertas" />
 
         <div data-aos='fade-right' data-aos-duration='1200' className='flex justify-center items-center lg:items-start flex-col pl-5 w-[700px]'>
           <p className='text-sm font-bold pb-8'>A <span className='text-DarkRed '>LIBERTAS ASSETS</span> é uma empresa verdadeira moderna,impulsionada por uma equipe altamente motivada de profissionais exepcionais experientes</p>
-          <p className='text-sm text-LightGray'>A Libertas é uma firma de advocacia comprometida em oferecer soluções jurídicas personalizadas e de alta qualidade para nossos clientes. Com uma equipe de advogados experientes e dedicados, buscamos alcançar resultados excepcionais em diversas áreas do direito, sempre priorizando a satisfação e proteção dos interesses de nossos clientes. Além disso, valorizamos profundamente a confiança depositada em nós e nos esforçamos para construir relacionamentos sólidos, baseados na transparência, ética e compromisso com o sucesso de nossos clientes</p>
+          <p className='text-sm text-LightGray text-left '>A Libertas é uma firma de advocacia comprometida em oferecer soluções jurídicas personalizadas e de alta qualidade para nossos clientes. Com uma equipe de advogados experientes e dedicados, buscamos alcançar resultados excepcionais em diversas áreas do direito, sempre priorizando a satisfação e proteção dos interesses de nossos clientes. Além disso, valorizamos profundamente a confiança depositada em nós e nos esforçamos para construir relacionamentos sólidos, baseados na transparência, ética e compromisso com o sucesso de nossos clientes</p>
         </div>
       </div>
 
       <div id='serviços' className='flex justify-center gap-12 bg-DarkBlue py-20 px-24 flex-col'>
-          <p className='tracking-wide font-bold text-2xl'>NOSSOS SERVIÇOS</p>
-          <div  className='flex flex-wrap lg:flex-nowrap items-center justify-center gap-3'>
+          <p className='tracking-wide font-bold text-2xl min-[1550px]:text-center'>NOSSOS SERVIÇOS</p>
+          <div  className='flex flex-wrap min-[1117px]:flex-nowrap items-center justify-center gap-3'>
             {services.map((service) => (
               <Service key={service.id} {...service} />
             ))}

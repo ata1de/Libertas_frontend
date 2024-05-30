@@ -32,8 +32,8 @@ const Forms = () => {
 
 
   return (
-    <div id='conteConosco' className='flex items-center justify-around gap-8 bg-LightBlue  py-20 px-24'>
-        <div className='flex flex-col items-center justify-center gap-4 w-[165px] mr-[120px]'>
+    <div id='conteConosco' className='flex flex-col items-center justify-around sm:flex-row  gap-12 bg-LightBlue py-20 px-24'>
+        <div className='flex flex-col items-center justify-center gap-4 w-[165px] sm:mr-[120px] m-auto sm:m-0'>
             <p className='font-bold text-3xl border-b-2 border-DarkRed'>FALE COM A LIBERTAS</p>
             <div className='flex flex-col justify-center gap-4'>
                 <div>

@@ -22,7 +22,7 @@ export default function all() {
     , [])
 
   return (
-    <div className='w-full min-h-screen flex flex-col'>
+    <div className='w-full min-h-screen flex flex-col '>
         <Head>
             <title>Libertas</title>
             <link rel="shortcut icon" href="/logo_libertas.svg" type="image/x-icon" />
@@ -36,7 +36,7 @@ export default function all() {
 
             <div className='flex flex-wrap justify-around items-center gap-4'>
                 {listServices.length > 0 ? (listServices.map((service) => (
-                    <Service id={service.id} name={service.name} description={service.description}/>
+                    <Service key={service.id} id={service.id} name={service.name} description={service.description}/>
                 ))) :  (
                     <p className='text-center italic drop-shadow-md text-lg '>Sem serviços desejados no momento</p>
                 )}
