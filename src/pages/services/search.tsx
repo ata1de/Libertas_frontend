@@ -3,6 +3,7 @@ import { Header } from '@/components/header'
 import { HeaderSearch } from '@/components/headerSearch'
 import { Hero } from '@/components/hero'
 import { Service } from '@/components/service'
+import SkeletonCard from '@/components/skeleton'
 import serviceService, { ServiceType } from '@/services/serviceApi'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -13,12 +14,15 @@ export default function search() {
     const router = useRouter()
     const { name }: any  = router.query
     const [listServices, setListServices] = useState<ServiceType[]>([])
+    const [isLoading, setIsLoading] = useState(true)
     
 
     const searchServices = async () => {
+        setIsLoading(true)
         const res = await serviceService.getByName(name)
         // console.log(res)
         setListServices(res.data.services)
+        setIsLoading(false)
     }
 
     useEffect(() => {
@@ -43,13 +47,18 @@ export default function search() {
             {/* <p className='tracking-wide font-bold text-2xl'>Serviços relacinados à "{name}"</p> */}
 
             <div className='flex flex-wrap justify-around items-center gap-4'>
-                {listServices.length > 0 ? (listServices.map((service) => (
-                    <Service id={service.id} name={service.name} description={service.description}/>
-                ))) :  (
-                    <p className='text-center italic drop-shadow-md text-lg '>Sem serviços correspondentes no momento. <span className='hover:border-b-2 hover:border-DarkRed'><a href="/services/all">Veja todos os nossos serviços</a></span></p>
-                )}
+                    {isLoading ? (
+                        // Show Skeleton while loading
+                        <SkeletonCard />
+                    ) : listServices.length > 0 ? (
+                        listServices.map((service) => (
+                            <Service id={service.id} name={service.name} description={service.description}/>
+                        ))
+                    ) : (
+                        <p className='text-center italic drop-shadow-md text-lg '>Sem serviços correspondentes no momento. <span className='hover:border-b-2 hover:border-DarkRed'><a href="/services/all">Veja todos os nossos serviços</a></span></p>
+                    )}
+                </div>
             </div>
-        </div>
 
         <Footer/>
     </div>
