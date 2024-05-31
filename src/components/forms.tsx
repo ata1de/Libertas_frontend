@@ -7,7 +7,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import clientService from '@/services/clientService'
 import { toast } from 'sonner'
-import { Toaster } from './toaster' // Import the Toaster component
+import { Toaster } from './ui/sonner' // Import the Toaster component
 
 const clientSchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),

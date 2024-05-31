@@ -47,7 +47,7 @@ export const HeaderSearch = () => {
             <Input 
               name='search' 
               type='search' 
-              className='py-2 px-4 text-base text-black' 
+              className='pl-4 text-base text-black' 
               placeholder={"Pesquise os serviços"} 
               onChange={(event) => {
                 setSearchName(event.currentTarget.value)
