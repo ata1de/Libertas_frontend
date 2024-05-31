@@ -30,7 +30,7 @@ export const Header = () => {
           }
     }
   return (
-    <div className='bg-transparent flex justify-between items-center pt-6 h-[80px]'>
+    <div className='bg-transparent flex justify-center lg:justify-between items-center pt-6 h-[80px]'>
         <div className='flex items-center justify-center'>
             <a href="/" className='flex items-center gap-3'>
                 <img className='w-8' src="/logo_libertas.svg" alt="Foto das mãos de um advogado" />

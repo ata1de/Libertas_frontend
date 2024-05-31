@@ -18,7 +18,7 @@ export const Hero = () => {
             <Header/>
         </div>
 
-        <div className='flex items-left justify-center w-[50%] flex-col gap-4 h-screen pb-11'>
+        <div className='flex items-left justify-center  md:w-[50%] flex-col gap-4 h-screen pb-11'>
           <p className='text-4xl font-bold'>LIBERTAS ASSETS</p>
           <p className=' text-LightGray leading-8 max-w-[290px] sm:text-2xl text-lg '>Reiventando o mercado de fundos e investimentos</p>
           <Button className='bg-DarkRed w-[140px]'>Saiba mais</Button>
