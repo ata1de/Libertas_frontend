@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import clientService from '@/services/clientService'
-import { toast } from 'sonner'
+import {toast} from 'sonner'
 import { Toaster } from './ui/sonner' // Import the Toaster component
 
 const clientSchema = z.object({
@@ -75,7 +75,7 @@ const Forms = () => {
                 <Textarea className='text-black h-[150px]' placeholder='Escreva o serviço que você deseja, detalhe o quanto puder.' {...register('demand')} />
                 <Button className='bg-DarkRed w-[150px]' type='submit'>ENVIAR</Button>
             </form>
-            <Toaster /> {/* Include the Toaster component to enable toast notifications */}
+            <Toaster /> 
         </div>
     )
 }
