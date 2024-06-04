@@ -11,12 +11,18 @@ https://libertas-frontend.vercel.app/
 <br>
 
 ## ☕ More about 
-Spicers is a store of spicy products. At the moment, the project is made of 5 pages and all of them has good features:
-  * **Sobre**: Learn a little about the company and what it offers ; 
-  * **Serviços**: Shows 3 random services
-  * **Historia**: A tab to go to showing the company's history
-  * **Conte Conosco**: See contact infos and send a message 
-  * **Input**: Search for a service by name or all services ;
+Libertas is a law firm committed to offering personalized, high-quality legal solutions to our clients. At the moment, the project is made of 2 pages and all of them has good features:
+ - Home
+```
+  - Sobre: Learn a little about the company and what it offers ; 
+  - Serviços: Shows 3 random services
+  - História: A tab to go to showing the company's history
+  - Conte conosco: See contact infos and send a message 
+```
+- Services
+  ```
+  Show all services
+  ```
 <br>
 Besides that, obviously the project is 100% adaptable for mobile devices and strategy planned for future software maintenance.
 
