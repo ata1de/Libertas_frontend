@@ -12,7 +12,7 @@ https://libertas-frontend.vercel.app/
 
 ## ☕ More about 
 Libertas is a law firm committed to offering personalized, high-quality legal solutions to our clients. At the moment, the project is made of 2 pages and all of them has good features:
- - Home
+- Home
 ```
   - Sobre: Learn a little about the company and what it offers ; 
   - Serviços: Shows 3 random services
@@ -20,9 +20,9 @@ Libertas is a law firm committed to offering personalized, high-quality legal so
   - Conte conosco: See contact infos and send a message 
 ```
 - Services
-  ```
-  Show all services
-  ```
+```
+Show all services
+```
 <br>
 Besides that, obviously the project is 100% adaptable for mobile devices and strategy planned for future software maintenance.
 
