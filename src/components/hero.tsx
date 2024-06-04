@@ -13,7 +13,7 @@ export const Hero = () => {
     }
 
   return (
-    <div className=' w-full min-h-screen md:h-screen pl-24 pr-24' style={style}>
+    <div className=' w-full min-h-screen md:h-screen min-[1556px]:px-48 px-24 ' style={style}>
         <div>
             <Header/>
         </div>

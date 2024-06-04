@@ -20,7 +20,7 @@ const clientSchema = z.object({
 type ClientSchema = z.infer<typeof clientSchema>
 
 const Forms = () => {
-    const { register, handleSubmit, reset } = useForm<ClientSchema>({
+    const { register, handleSubmit, reset, formState: {errors} } = useForm<ClientSchema>({
         resolver: zodResolver(clientSchema)
     })
 
@@ -64,12 +64,28 @@ const Forms = () => {
             <form onSubmit={handleSubmit(handleClient)} className='flex flex-col justify-center items-center gap-3 w-[210px] md:w-[310px] lg:w-[610px]'>
                 <div className='flex items-center justify-center gap-3'>
                     <div className='flex flex-col items-center justify-center gap-3'>
-                        <Input className='text-black w-[100px] md:w-[150px] lg:w-[300px]' placeholder='nome' {...register('name')} />
-                        <Input className='text-black w-[100px] md:w-[150px] lg:w-[300px]' placeholder='email' {...register('email')} />
+                        <Input 
+                        className='text-black w-[100px] md:w-[150px] lg:w-[300px]' 
+                        placeholder='nome' 
+                        {...register('name')} 
+                        />
+                        <Input 
+                        className='text-black w-[100px] md:w-[150px] lg:w-[300px]' 
+                        placeholder='email'
+                         {...register('email')} 
+                         />
                     </div>
                     <div className='flex flex-col items-center justify-center gap-3'>
-                        <Input className='text-black w-[100px] md:w-[150px] lg:w-[300px]' placeholder='phone' {...register('phone')} />
-                        <Input className='text-black w-[100px] md:w-[150px] lg:w-[300px]' placeholder='company' {...register('company')} />
+                        <Input 
+                        className='text-black w-[100px] md:w-[150px] lg:w-[300px]' 
+                        placeholder='phone'
+                         {...register('phone')} 
+                         />
+                        <Input 
+                        className='text-black w-[100px] md:w-[150px] lg:w-[300px]' 
+                        placeholder='compan
+                        y' {...register('company')} 
+                        />
                     </div>
                 </div>
                 <Textarea className='text-black h-[150px]' placeholder='Escreva o serviço que você deseja, detalhe o quanto puder.' {...register('demand')} />
