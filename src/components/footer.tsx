@@ -5,7 +5,7 @@ export const Footer = () => {
     <div className='flex flex-col md:flex-row justify-around items-center gap-12 md:gap-10  px-24 py-20 bg-DarkBlue border-t-4 border-DarkRed'>
         <div className='flex flex-col items-center md:items-start justify-center gap-3 md:order-first order-1'>
             <img className='w-[100px]' src="/logo_libertas.svg" alt="Logo da empresa Libertas" />
-            <p className='text-5xl  font-bold font-sans'>LIBERTAS</p>
+            <p className='text-5xl  font-bold font-sans '>LIBERTAS</p>
         </div>
 
         <div className='flex flex-col justify-center items-center md:items-end gap-4'>
