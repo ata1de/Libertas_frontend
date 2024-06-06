@@ -11,6 +11,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { Footer } from '@/components/footer'
 import Head from 'next/head'
+import { Button } from '@/components/ui/button'
 
 
 interface IndexPageProps  {
@@ -19,6 +20,14 @@ interface IndexPageProps  {
 }
 
 const Home = ({services}: IndexPageProps) => {
+
+  const styleHistory = {
+    backgroundImage: `url(/justice.png)`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center'
+
+}
   // console.log(services)
 
   useEffect(() => {
@@ -52,6 +61,18 @@ const Home = ({services}: IndexPageProps) => {
             {services.map((service) => (
               <Service key={service.id} {...service} />
             ))}
+          </div>
+      </div>
+
+      <div id='historia' className="w-full min-h-screen md:h-screen" style={styleHistory}>
+          <div className='flex flex-col items-start justify-center gap-8 w-[95%] min-[420px]:[90%] min-[470px]:w-[80%] min-[530px]:w-[60%] h-screen pl-11 min-[470px]:pl-24'>
+            <p className='text-2xl font-bold text-white text-left'>NOSSA HISTÓRIA</p>
+            <p className='text-sm text-LightGray text-left'>A Companhia de Advocacia Libertas foi fundada em 1995 por três advogados visionários, com a missão de proporcionar soluções jurídicas que libertem seus clientes das complexidades legais.
+            Com sede em um edifício histórico, a Libertas se destacou pela ética, justiça e inovação, oferecendo uma abordagem holística nas áreas de direito civil, empresarial e penal.</p>
+            <p className='text-sm text-LightGray text-left'>Ao longo dos anos, a Libertas cresceu e se tornou referência na comunidade jurídica, reconhecida por sua excelência em litígios complexos e consultoria estratégica.
+               Investindo em tecnologia e comprometida com causas sociais, a empresa oferece serviços pro bono e promove educação jurídica. 
+              Com uma equipe diversificada e um forte compromisso com a justiça, a Libertas é um verdadeiro defensor da liberdade</p>
+            <Button className='bg-DarkRed w-[140px]'>Saiba mais</Button>
           </div>
       </div>
 
