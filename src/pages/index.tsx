@@ -72,7 +72,7 @@ const Home = ({services}: IndexPageProps) => {
             <p className='text-sm text-LightGray text-left'>Ao longo dos anos, a Libertas cresceu e se tornou referência na comunidade jurídica, reconhecida por sua excelência em litígios complexos e consultoria estratégica.
                Investindo em tecnologia e comprometida com causas sociais, a empresa oferece serviços pro bono e promove educação jurídica. 
               Com uma equipe diversificada e um forte compromisso com a justiça, a Libertas é um verdadeiro defensor da liberdade</p>
-            <Button className='bg-DarkRed w-[140px]'>Saiba mais</Button>
+            <Button className='bg-DarkRed w-[140px] '>Saiba mais</Button>
           </div>
       </div>
 
