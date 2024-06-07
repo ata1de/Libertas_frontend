@@ -30,7 +30,7 @@ export default function search() {
     }
     , [name])
 
-    console.log(listServices)
+    // console.log(listServices)
     
 
   return (
