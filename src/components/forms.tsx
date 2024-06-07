@@ -66,24 +66,24 @@ const Forms = () => {
                     <div className='flex flex-col items-center justify-center gap-3'>
                         <Input
                             className={`text-black w-[100px] md:w-[150px] lg:w-[300px] ${errors.name ? 'border-red-500' : ''}`}
-                            placeholder=' Nome'
+                            placeholder='Nome'
                             {...register('name')}
                         />
                         <Input
                             className={`text-black w-[100px] md:w-[150px] lg:w-[300px] ${errors.email ? 'border-red-500' : ''}`}
-                            placeholder=' Email'
+                            placeholder='Email'
                             {...register('email')}
                         />
                     </div>
                     <div className='flex flex-col items-center justify-center gap-3'>
                         <Input
                             className={`text-black w-[100px] md:w-[150px] lg:w-[300px] ${errors.phone ? 'border-red-500' : ''}`}
-                            placeholder=' Phone'
+                            placeholder='Phone'
                             {...register('phone')}
                         />
                         <Input
                             className={`text-black w-[100px] md:w-[150px] lg:w-[300px] ${errors.company ? 'border-red-500' : ''}`}
-                            placeholder=' Company'
+                            placeholder='Company'
                             {...register('company')}
                         />                
                     </div>
