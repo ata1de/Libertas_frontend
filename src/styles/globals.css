@@ -101,3 +101,11 @@ html {
 .hover\:underline-after:hover::after {
   width: 100%;
 }
+
+/* Supondo que você tenha um arquivo de estilos global */
+#sonner-toaster {
+  position: fixed; /* ou absolute */
+  top: 0;
+  right: 0;
+  z-index: 9999; /* ou outro valor alto para garantir que esteja acima dos outros elementos */
+}
