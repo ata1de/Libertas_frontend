@@ -21,6 +21,20 @@ const clientService = {
         })
 
         return res  
+    },
+
+    postSendEmail: async(user: ClientType) => {
+        const res = await api.post('/email', user ).catch((err) => {
+            if (err.response.status = 400) {
+                console.log(err)
+                return err.response
+            }
+
+            console.log(err)
+            return err
+        })
+
+        return res
     }
 }
 

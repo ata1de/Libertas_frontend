@@ -13,7 +13,7 @@ const clientSchema = z.object({
     name: z.string().min(1, { message: "Name is required" }),
     email: z.string().email({ message: "Invalid email format" }).min(1, { message: "Email is required" }),
     phone: z.string()
-        .regex(/^\(\d{2}\)\s?\d{5}-\d{4}$/, { message: "Phone number must be in the format (81) 99242-3427" })
+        .regex(/^\(?\d{2}\)?\s\d{5}-\d{4}$/, { message: "Phone number must be in the format (81) 99242-3427" })
         .min(1, { message: "Phone number is required" }),
     company: z.string().min(1, { message: "Company name is required" }),
     demand: z.string().min(1, { message: "Demand description is required" })
@@ -33,18 +33,19 @@ const Forms = () => {
                 reset(); // Limpar os inputs após o envio bem-sucedido
                 toast.success('Formulário enviado com sucesso!', {
                     style: { backgroundColor: 'green', color: 'white' },
-                    duration: 3500 // O toast desaparecerá após 5 segundos
+                    duration: 2500 // O toast desaparecerá após 5 segundos
                 });
+                await clientService.postSendEmail(data);
             } else {
                 toast.error('Falha ao enviar formulário. Tente novamente.', {
                     style: { backgroundColor: 'red', color: 'white' },
-                    duration: 3500
+                    duration: 2500
                 });
             }
         } catch (error) {
-            toast.error('Erro ao enviar formulário. Tente novamente.', {
+            toast.error('Erro no servidor. Tente novamente mais tarde', {
                 style: { backgroundColor: 'red', color: 'white' },
-                duration: 3500
+                duration: 2500
             });
         }
     };
