@@ -1,8 +1,10 @@
 import { useRouter } from 'next/router'
 import React, { FormEvent, useState } from 'react'
 import { Input } from './ui/input'
-import { Search } from 'lucide-react'
+import { MenuIcon, Search } from 'lucide-react'
 import { z } from 'zod'
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet'
+import { Separator } from './ui/separator'
 
 const searchSchema = z.object({
   searchName: z.string().nonempty("O campo não pode estar vazio"),
@@ -58,9 +60,47 @@ export const HeaderSearch = () => {
             </p>
           </div>
         </div>
-            <button type='submit' className='bg-DarkGray p-2 rounded-md h-[40px] text-3xl'><Search/></button>
-            
+            <button type='submit' className='bg-DarkGray p-2 rounded-md h-[40px] text-3xl'><Search/></button>    
         </form>
+
+        <Sheet>
+        <SheetTrigger asChild>
+          <MenuIcon className='block lg:hidden cursor-pointer' size={28} />
+        </SheetTrigger>
+        <SheetContent className='bg-slate-900'>
+          <SheetHeader>
+            <SheetTitle className='flex gap-2'>
+              <img className='w-5' src="/logo_libertas.svg" alt="Foto das mãos de um advogado" />
+              <p className='uppercase text-2xl text-DarkRed font-bold font-sans'>LIBERTAS</p>
+            </SheetTitle>
+            <SheetDescription>
+              Browse our site through this area.
+            </SheetDescription>
+            <Separator className='w-auto'/>
+          </SheetHeader> 
+
+          <SheetTitle className='text-white mt-5'>Search</SheetTitle>   
+          <form className='gap-1 flex max-w-full mt-3' onSubmit={handleSearch}>
+              <div className='flex flex-col'>
+                <div className='relative'>
+                  <Input 
+                    name='search' 
+                    type='search' 
+                    className='pl-4 text-base text-black' 
+                    placeholder={"Pesquise os serviços"} 
+                    onChange={(event) => {
+                      setSearchName(event.currentTarget.value)
+                    }}
+                  />
+                  <p className={`absolute text-red-500 mt-1 ${error ? 'visible' : 'invisible'}`}>
+                    {error}
+                  </p>
+                </div>
+              </div>
+                  <button type='submit' className='bg-DarkGray p-2 rounded-md h-[40px] text-3xl'><Search/></button>
+            </form>
+        </SheetContent>
+    </Sheet>
     </div>
   )
 }

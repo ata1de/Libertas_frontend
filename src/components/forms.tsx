@@ -33,19 +33,19 @@ const Forms = () => {
                 reset(); // Limpar os inputs após o envio bem-sucedido
                 toast.success('Formulário enviado com sucesso!', {
                     style: { backgroundColor: 'green', color: 'white' },
-                    duration: 2500 // O toast desaparecerá após 5 segundos
+                    duration: 2000 // O toast desaparecerá após alguns segundos
                 });
                 await clientService.postSendEmail(data);
             } else {
                 toast.error('Falha ao enviar formulário. Tente novamente.', {
                     style: { backgroundColor: 'red', color: 'white' },
-                    duration: 2500
+                    duration: 2000
                 });
             }
         } catch (error) {
             toast.error('Erro no servidor. Tente novamente mais tarde', {
                 style: { backgroundColor: 'red', color: 'white' },
-                duration: 2500
+                duration: 2000
             });
         }
     };
