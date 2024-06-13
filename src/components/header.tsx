@@ -6,6 +6,7 @@ import { z } from 'zod'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet'
 import { Separator } from './ui/separator'
 import { Label } from '@radix-ui/react-label'
+import NavbarSheet from './navbarSheet'
 
 const searchSchema = z.object({
     searchName: z.string().min(1, {message: "O campo não pode estar vazio"}),
@@ -79,7 +80,7 @@ export const Header = () => {
         <SheetTrigger asChild>
           <MenuIcon className='block lg:hidden cursor-pointer' size={28} />
         </SheetTrigger>
-        <SheetContent className='bg-slate-900' {...{ /* props */ } as SheetContentProps}>
+        <SheetContent className='bg-slate-900'>
           <SheetHeader>
             <SheetTitle className='flex gap-2'>
               <img className='w-5' src="/logo_libertas.svg" alt="Foto das mãos de um advogado" />
@@ -90,20 +91,7 @@ export const Header = () => {
             </SheetDescription>
             <Separator className='w-auto'/>
           </SheetHeader>
-          <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="name" className="text-right">
-                  Name
-                </Label>
-                <Input id="name" value="Pedro Duarte" className="col-span-3" />
-              </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="username" className="text-right">
-                  Username
-                </Label>
-                <Input id="username" value="@peduarte" className="col-span-3" />
-              </div>
-          </div>
+          <NavbarSheet handleSearch={handleSearch} setSearchName={setSearchName} error={error}/>
         </SheetContent>
     </Sheet>
     </div>
