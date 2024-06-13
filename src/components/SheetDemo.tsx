@@ -15,22 +15,17 @@ interface SheetDemoProps {
 const SheetDemo = ({handleSearch, setSearchName, error}: SheetDemoProps) => {
   return (
     <Sheet>
-        <SheetTrigger asChild>
-          <MenuIcon className='block lg:hidden cursor-pointer' size={28} />
-        </SheetTrigger>
-        <SheetContent style={{backgroundColor: '#0F172A'}}>
-          <SheetHeader>
-            <SheetTitle className='flex gap-2'>
-              Libertas
-            </SheetTitle>
-            <SheetDescription>
-              Browse our site through this area.
-            </SheetDescription>
-            <Separator className='w-auto'/>
-          </SheetHeader>
-          <NavbarSheet handleSearch={handleSearch} setSearchName={setSearchName} error={error}/>
-        </SheetContent>
-    </Sheet>
+  <SheetTrigger>Open</SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetTitle>Are you absolutely sure?</SheetTitle>
+      <SheetDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
   )
 }
 
