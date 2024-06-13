@@ -21,7 +21,7 @@ const SheetDemo = ({handleSearch, setSearchName, error}: SheetDemoProps) => {
         <SheetContent style={{backgroundColor: '#0F172A'}}>
           <SheetHeader>
             <SheetTitle className='flex gap-2'>
-              <a href="">Libertas</a>
+              Libertas
             </SheetTitle>
             <SheetDescription>
               Browse our site through this area.
