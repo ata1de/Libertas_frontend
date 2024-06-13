@@ -3,8 +3,10 @@ import { Input } from './ui/input'
 import { Menu, MenuIcon, Search, SearchXIcon } from 'lucide-react'
 import { useRouter } from 'next/router'
 import { z } from 'zod'
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet'
+import { Separator } from './ui/separator'
 import NavbarSheet from './navbarSheet'
-import SheetDemo from './SheetDemo'
+
 
 const searchSchema = z.object({
     searchName: z.string().min(1, {message: "O campo não pode estar vazio"}),
@@ -73,8 +75,25 @@ export const Header = () => {
         </div>
             <button type='submit' className='bg-DarkGray p-2 rounded-md h-[40px] text-3xl'><Search/></button>
         </form>
-
-        <SheetDemo handleSearch={handleSearch} setSearchName={setSearchName} error={error}/>
+        
+        <Sheet>
+        <SheetTrigger asChild>
+          <MenuIcon className='block lg:hidden cursor-pointer' size={28} />
+        </SheetTrigger>
+        <SheetContent style={{backgroundColor: '#0F172A'}}>
+          <SheetHeader>
+            <SheetTitle className='flex gap-2'>
+              <img className='w-5' src="/logo_libertas.svg" alt="Foto das mÃ£os de um advogado" />
+              <p className='uppercase text-2xl text-DarkRed font-bold font-sans'>LIBERTAS</p>
+            </SheetTitle>
+            <SheetDescription>
+              Browse our site through this area.
+            </SheetDescription>
+            <Separator className='w-auto'/>
+          </SheetHeader>
+          <NavbarSheet handleSearch={handleSearch} setSearchName={setSearchName} error={error}/>
+        </SheetContent>
+    </Sheet>
     </div>
   )
 }
