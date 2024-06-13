@@ -21,8 +21,7 @@ const SheetDemo = ({handleSearch, setSearchName, error}: SheetDemoProps) => {
         <SheetContent style={{backgroundColor: '#0F172A'}}>
           <SheetHeader>
             <SheetTitle className='flex gap-2'>
-              <img className='w-5' src="/logo_libertas.svg" alt="Foto das mãos de um advogado" />
-              <p className='uppercase text-2xl text-DarkRed font-bold font-sans'>LIBERTAS</p>
+              <a href="">Libertas</a>
             </SheetTitle>
             <SheetDescription>
               Browse our site through this area.
