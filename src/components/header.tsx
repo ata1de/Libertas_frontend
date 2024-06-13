@@ -79,7 +79,7 @@ export const Header = () => {
         <SheetTrigger asChild>
           <MenuIcon className='block lg:hidden cursor-pointer' size={28} />
         </SheetTrigger>
-        <SheetContent className='bg-slate-900' >
+        <SheetContent className='bg-slate-900' {...{ /* props */ } as SheetContentProps}>
           <SheetHeader>
             <SheetTitle className='flex gap-2'>
               <img className='w-5' src="/logo_libertas.svg" alt="Foto das mãos de um advogado" />
