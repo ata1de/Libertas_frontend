@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
 import { useTheme } from "next-themes"
-import { Toaster as Sonner } from "sonner"
+import { Toaster as Sonner, toast } from "sonner"
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
 
@@ -19,6 +19,9 @@ const Toaster = ({ ...props }: ToasterProps) => {
           actionButton: "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
           cancelButton: "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",
         },
+        // Add the close button to each toast
+        closeButton: true,
+        
       }}
       {...props}
     />
